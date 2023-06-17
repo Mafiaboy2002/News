@@ -5,12 +5,11 @@ import axios from 'axios';
 
 function App() {
   const [data,setData] = useState([]);
-  const getNews =()=>{
-   axios.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=deedc72c5a484428baad5763cdf70054&q=india")
-   .then((response)=>{
+  const getNews = async ()=>{
+   const response = await axios.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=deedc72c5a484428baad5763cdf70054&q=india")
+   
   //  console.log(response);
    setData(response.data.articles)
-   })
   }
   return (
     <>
