@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+.header {
+  overflow: hidden;
+  background-color: #6c757d;
+  padding: 20px 10px;
+}
